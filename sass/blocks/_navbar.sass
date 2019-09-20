@@ -35,9 +35,11 @@
     padding: 16px 0
     background-color: $primary
     color: #ffffff
-    transform: translateY(-100%)
-    &-active
+    transform: translateY(-200%)
+    opacity: 0
+    &_active
         transform: translateY(0)
+        opacity: 1
     &__nav
         display: flex
         align-items: center
@@ -75,3 +77,22 @@
         display: block
         font-size: 14px
         color: $text-color-light
+@media (max-width: 991px)
+    .navbar
+        &__mobile, &__landline
+            display: none
+@media (max-width: 576px)
+    .logo
+        display: none
+    .menu
+        top: 60px
+        height: 50%
+        &-button
+            height: 60px
+        &__nav
+        flex-direction: column
+        &__link
+            margin-bottom: 20px
+
+
+    
